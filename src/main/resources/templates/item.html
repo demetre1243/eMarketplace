@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Ad Details</title></head>
+<body>
+<h1 th:text="${ad.name}"></h1>
+<img th:src="${ad.photoUrl}" width="300">
+<p th:text="${ad.description}"></p>
+<p th:text="'Price: $' + ${ad.price}"></p>
+<p th:text="${ad.submittionTime}"></p>
+<a th:href="@{/market}">Back</a>
+</body>
+</html>

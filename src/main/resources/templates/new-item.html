@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>New Ad</title></head>
+<body>
+<h1>Create New Advertisement</h1>
+<form th:action="@{/market/new}" method="post" enctype="multipart/form-data">
+    <input type="text" name="name" placeholder="Title" required><br>
+    <input type="number" name="price" placeholder="Price" required><br>
+    <textarea name="description" placeholder="Description" required></textarea><br>
+    <input type="file" name="photo" accept="image/*" required><br>
+    <button type="submit">Submit</button>
+</form>
+<a th:href="@{/market}">Back to List</a>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>All Ads</title></head>
+<body>
+<h1>All Advertisements</h1>
+<div th:each="ad : ${ads}">
+    <h2 th:text="${ad.name}"></h2>
+    <img th:src="${ad.photoUrl}" width="200">
+    <p th:text="${ad.price}"></p>
+    <a th:href="@{/market/item/{id}(id=${ad.id})}">View</a>
+</div>
+<div>
+    <a th:href="@{/market/new}">Add New</a>
+</div>
+</body>
+</html>
